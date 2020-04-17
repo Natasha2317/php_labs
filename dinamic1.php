@@ -9,22 +9,6 @@
   	<link href="https://fonts.googleapis.com/css?family=PT+Sans|Playfair+Display+SC" rel="stylesheet">
 </head>
 <body>
-    <style>
-        footer{
-            position: fixed;
-            bottom: 0px;
-            width: 100%;
-            border-top: 1px solid rgb(73, 73, 73);;
-            padding: 20px 0 10px;
-            background-color: #4d4d4d; 
-            color: rgb(197, 196, 196);
-            font-family: 'Playfair Display SC', serif;
-        }
-        .product-item {
-            height: 900px;
-        }
-    </style>
-
     <header>
         <div class="nav-menu">
         <a href="<?php 
