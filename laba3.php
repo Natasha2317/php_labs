@@ -45,7 +45,7 @@
             <a class="number" href="?key=0&num=<?php echo $_GET['num']; ?>&store=<?php echo $_GET['store']; ?>">0</a>
         </div>
         <div class="reset">
-            <a class="res" href="index.php?num=<?php echo $_GET['num']; ?>">СБРОС</a>
+            <a class="res" href="laba3.php?num=<?php echo $_GET['num']; ?>">СБРОС</a>
         </div>
     </main>
     <footer>
