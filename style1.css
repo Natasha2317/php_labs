@@ -6,6 +6,43 @@ body{
     background-color: lightgray;
     padding: 15px !important;
 }
+form {
+    width: 800px;
+    padding: 20px;
+}
+fieldset{
+    padding: 10px;
+    border: 2px solid rgba(201, 129, 129, 0.801);
+}
+legend{
+    font-size: 20px;
+}
+fieldset > span{
+    font-size: 17px;
+}
+label{
+    font-size: 17px;
+}
+button {
+    font-size: 1.05em;
+    padding: 5px 15px;
+    margin-top: 10px
+}
+#fio{
+    margin-right: 16px;
+}
+#group {
+    margin-right: 4px
+}
+textarea {
+    width: 300px;
+    vertical-align: middle;
+    margin-top: 4px;
+    margin-left: 6px;
+}
+.number {
+    margin-right: 10px
+}
 header{
     position:fixed;
     top:0;
@@ -35,21 +72,6 @@ footer{
     background-color: rgba(255, 205, 205, 0.616);
     padding: 10px 30px;
 }
-div{
-    display: inline-block;
-    border: 2px solid red;
-    margin: 8px !important;
-    padding: 2px;
-}
-table{
-    top: -100px !important;
-    border: 1px solid black;
-    border-collapse: collapse;
-}
-table td{
-    border: 1px solid black;
-    padding: 7px;
-}
 h1{
     position: absolute;
     top: 20px;
@@ -59,7 +81,4 @@ h2{
     position: absolute;
     top: 55px;
     left: 330px;
-}
-.t{
-    margin-top: -650px;
 }
