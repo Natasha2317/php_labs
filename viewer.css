@@ -1,0 +1,160 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    width: 90%;
+    background-color: lightgray;
+    padding: 15px !important;
+    font-family: 'Playfair Display SC', serif;
+}
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(255, 205, 205, 0.616);
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+h1{
+    text-align: center;
+}
+table, td{
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+    text-align: center;
+}
+main{
+    width: 100%;
+    margin-top: 50px;
+    padding: 35px;
+    height: 100%;
+}
+.error{
+    color: black;
+    margin-top: 100px;
+}
+a {
+    color: rgb(13, 26, 214);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.selected {
+    color: rgb(212, 46, 46);
+    text-decoration: none;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+#pages {
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#pages a {
+    margin: 0 2px;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 3px 5px;
+    text-decoration: none;
+    border-radius: 3px
+}
+
+#pages a:hover {
+    text-decoration: underline;
+}
+
+
+#pages span {
+    margin: 0 2px;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 3px 5px;
+    border-radius: 3px
+}
+
+#submenu {
+    padding-left: 24px;
+    font-size: 15px;
+}
+
+#submenu a {
+    color:  rgb(13, 26, 214);
+}
+
+#submenu .selected {
+    color: rgb(212, 46, 46);
+}
+fieldset{
+    border: none;
+    padding: 10px;
+}
+form > input{
+    width: 200px;
+    height: 25px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    margin: 4px;
+    padding: 3px;
+}
+legend{
+    font-weight: 600;
+}
+#name{
+    margin-left: 48px;
+}
+#otchestvo{
+    margin-left: 8px;
+}
+#address{
+    margin-left: 46px;
+}
+#phone{
+    margin-left: 11px;
+}
+#email{
+    margin-left: 4px;
+}
+textarea{
+    width: 220px;
+    height: 55px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    margin: 4px;
+}
+#delete_links {
+    width: 78%;
+    margin: auto;
+    line-height: 170%;
+    margin-bottom: 30px;
+    margin-top: 25px;
+}
+
+.delete_button {
+    display: inline-block;
+    padding: 0 6px;
+    color: rgb(133, 6, 6);
+    border: 1px solid red;
+    border-radius: 8px;
+    margin-right: 7px;
+    margin-bottom: 7px;
+    margin-top: 0;
+}
+
+.delete_button:hover {
+    text-decoration: none;
+    background:rgb(156, 22, 22);
+    color: snow;
+}
+.in-delete{
+    text-align: center;
+}
