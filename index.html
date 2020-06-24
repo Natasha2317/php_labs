@@ -1,10 +1,93 @@
-<a href="laba1.html">1 лаба</a>
-<a href="laba2.php">2 лаба</a>
-<a href="laba3.php">3 лаба</a>
-<a href="laba4.php">4 лаба</a>
-<a href="laba5.php">5 лаба</a>
-<a href="laba6.php">6 лаба</a>
-<a href="laba7.php">7 лаба</a>
-<a href="laba8.php">8 лаба</a>
-<a href="index.php">9 лаба</a>
-<a href="laba10.php">10 лаба</a>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Павлова Наталья Витальевна, 191-321</title>
+    <link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans|Playfair+Display+SC" rel="stylesheet">
+</head>
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: 'Playfair Display SC', serif;
+	}
+	body{
+		background-color: lightgray;
+		padding: 15px !important;
+	}
+	header{
+		position:fixed;
+		top:0;
+		left:0;
+		width:100%;
+		height: 90px;
+		background-color: rgba(255, 205, 205, 0.616) !important;
+		padding: 10px;
+		z-index: 10;
+		display: flex;
+		justify-content: space-between;
+		font-size: 13px;
+	}
+	header > img{
+		width: 282px;
+		height: 75px;
+	}
+	form > button{
+		width: 200px;
+		margin: 0 auto;
+		border-radius: 8px;
+		background-color: rgba(255, 205, 205, 0.616);
+		border: 1px solid gray;
+		height: 30px;
+		margin-top: 10px;
+	}
+	.main__content form textarea {
+		resize: none;
+		width: 98%;
+		margin: 0 auto;
+		border-radius: 8px;
+		border: 1px solid gray;
+		margin-top: 70px;
+	}
+	.text_analiz {
+		margin-top: 35px;
+	}
+	.text_analiz .text_analiz__res {
+		color: purple;
+		font-style: italic;
+		margin-bottom: 10px;
+		margin-top: 30px;
+	}
+	h1{
+		margin-top: 20px;
+	}
+</style>
+<body>
+    <header>
+        <img src="logo.png">
+        <h1>Лабораторная работа №8</h1>
+    </header>
+		<div class="container">
+		<main>
+			<div class="content">
+				<div class="main__content">
+					<div class="text_analiz">
+					<form action="laba8.php" method="post">
+						<textarea name="text" id="" cols="30" rows="10"></textarea>
+						<button type="submit">Анализировать</button>
+					</form>
+				</div>
+			</div>
+		</main>
+		</div>
+		<footer>
+			<div class="content">
+				<div class="footer">
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
