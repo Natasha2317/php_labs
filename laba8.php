@@ -230,7 +230,7 @@
 						?>
 						<div class="another">
 							<div class="another_analiz">
-								<a href="index.html">Другой анализ</a>
+								<a href="index8.html">Другой анализ</a>
 							</div>
 						</div>
 						<div class="container"></div>
