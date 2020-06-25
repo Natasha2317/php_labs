@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css?<?php echo time();?>">
+    <link rel="stylesheet" href="viewer.css?<?php echo time();?>">
   	<link href="https://fonts.googleapis.com/css?family=PT+Sans|Playfair+Display+SC" rel="stylesheet">
 </head>
 <body>
@@ -34,11 +34,11 @@
             </div>
             <div class="form__name">
                 <span>'.$row['question1'].'</span>
-                <input type="text" name="answer1" id="answer1" placeholder="Введите ответ" required><br>
+                <input type="number" name="answer1" id="answer1" placeholder="Введите ответ" required><br>
             </div>
             <div class="form__name">
             <span>'.$row['question2'].'</span>
-                <input type="text" name="answer2" id="answer2" placeholder="Введите ответ" required><br>
+                <input type="number" min="0" name="answer2" id="answer2" placeholder="Введите ответ" required><br>
             </div>
             <div class="form__name">
             <span>'.$row['question3'].'</span>
@@ -57,36 +57,41 @@
             </div>
             <div class="form__name">
             <span>'.$row['question6'].'</span>
-                <p>Разводить кактусы<input type="checkbox" name="answer6[]" value="Разводить кактусы"></p>
-                <p>Спорт<input type="checkbox" name="answer6[]" value="Спорт"></p>
-                <p>Танцы<input type="checkbox" name="answer6[]" value="Танцы"></p>
+                <p>Разводить кактусы<input type="checkbox" name="answer6[0]" value="Разводить кактусы"></p>
+                <p>Спорт<input type="checkbox" name="answer6[1]" value="Спорт"></p>
+                <p>Танцы<input type="checkbox" name="answer6[2]" value="Танцы"></p>
             </div>
             <div class="form__name_button">
                 <button type="submit" name="answer_user" value="Ответить" class="form__button">Ответить</button>
             </div>';
 
-?>
-    <?php
-        if (isset($_POST['user_name']) && isset($_POST['answer1']) && isset($_POST['answer2'])){
-
 
         if (isset($_POST['answer_user']) &&( $_POST['answer_user'] == 'Ответить')){
-        $user_name = $_POST['user_name'];
-        $answer1 = $_POST['answer1'];
-        $answer2 = $_POST['answer2'];
-        $answer3 = $_POST['answer3'];
-        $answer4 = $_POST['answer4'];
-        $answer5 = $_POST['answer5'];
-        $answer6 = $_POST['answer6'];
+        $user_name = htmlspecialchars($_POST['user_name']);
+        $answer1 = htmlspecialchars($_POST['answer1']);
+        $answer2 = htmlspecialchars($_POST['answer2']);
+        $answer3 = htmlspecialchars($_POST['answer3']);
+        $answer4 = htmlspecialchars($_POST['answer4']);
+        $answer5 = htmlspecialchars($_POST['answer5']);
+        $date = date("Y-m-d H:i:s");
 
-        $query = "INSERT INTO my_opros(answer1, answer2, answer3, answer4, answer5, answer6, user_name) VALUES ('$answer1', '$answer2', '$answer3', '$answer4', '$answer5', '$answer6', '$user_name')";
+        if (isset($_POST['answer5']) &&( $_POST['answer5'] == 'м')){
+            $answer5_1 = $_POST['answer5'];
+            $sum = $answer5_1;
+        }
+        else{
+            $answer5_2 = $_POST['answer5'];
+            $sum = $answer5_2;
+        };
+        $sr_sum = $sum/5;
+
+        $query = "INSERT INTO my_opros(answer1, answer2, answer3, answer4, answer5, answer6, user_name, date, sum, sr_sum, answer5_1, answer5_2) VALUES ('$answer1', '$answer2', '$answer3', '$answer4', '$answer5', '$answer6', '$user_name', '$date', '$sum', '$sr_sum', $answer5_1, $answer5_2)";
         $mysqli->query($query);
         $mysqli->close();
         $url = 'http://localhost/exam/thanks.php';
 
         header("Location: $url");
     }
-}
         ?>
     </main>
 </body>
