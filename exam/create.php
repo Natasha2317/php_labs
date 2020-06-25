@@ -24,21 +24,21 @@
             <input type="text" name="question1" id="question" placeholder="Введите вопрос">
         </div>
         <div class="form__name">
-            <input type="text" name="question2" id="question" placeholder="Введите ответ">
+            <input type="text" name="question2" id="question" placeholder="Введите вопрос">
         </div>
         <div class="form__name">
-            <input type="text" name="question3" id="question" placeholder="Введите ответ">
+            <input type="text" name="question3" id="question" placeholder="Введите вопрос">
         </div>
         <div class="form__name">
-            <input type="text" name="question4" id="question" placeholder="Введите ответ">
+            <input type="text" name="question4" id="question" placeholder="Введите вопрос">
         </div>
         <div class="form__name">
-            <input type="text" name="question5" id="question" placeholder="Введите ответ">
+            <input type="text" name="question5" id="question" placeholder="Введите вопрос">
             <p>м<input type="text" name="question5_1" id="question" placeholder="Введите баллы(-100;100)"></p>
             <p>ж<input type="text" name="question5_2" id="question" placeholder="Введите баллы(-100;100)"></p>
         </div>
         <div class="form__name">
-            <input type="text" name="question6" id="question" placeholder="Введите ответ">
+            <input type="text" name="question6" id="question" placeholder="Введите вопрос">
         </div>
         <div>
 
@@ -54,13 +54,13 @@
         $question5_1 = $_POST['question5_1'];
         $question5_2 = $_POST['question5_2'];
 
-        $mysqli = new mysqli('localhost', 'root', '', 'opros');
+       $mysqli = new mysqli('std-mysql', 'std_946', 'cisco12345', 'std_946');
 
         if (mysqli_connect_error()){
             prinf("Соединение не установлено", mysqli_connect_error());
             exit();
         }
-        $query = "INSERT INTO my_opros(id, name_opros, question1, question2, question3, question4, question5, question6, question5_1, question5_2)
+        $query = "INSERT INTO my_opros1(id, name_opros, question1, question2, question3, question4, question5, question6, question5_1, question5_2)
         VALUES(NULL, '$name_opros','$question1', '$question2', '$question3', '$question4','$question5',
         '$question6', '$question5_1', $question5_2) ";
         $mysqli->query($query);
@@ -81,14 +81,14 @@
     </div>
     <?php
         if (isset($_POST['see']) &&( $_POST['see'] == 'Посмотреть')){
-        $mysqli = new mysqli('localhost', 'root', '', 'opros');
+       $mysqli = new mysqli('std-mysql', 'std_946', 'cisco12345', 'std_946');
 
         if (mysqli_connect_error()){
             prinf("Соединение не установлено", mysqli_connect_error());
             exit();
         }
 
-        $query = $mysqli->query('SELECT * FROM my_opros');
+        $query = $mysqli->query('SELECT * FROM my_opros1');
         echo'<table><tr><td>ID</td>
         <td>Название опроса</td>
         <td>Имя пользователя</td>
