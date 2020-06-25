@@ -14,13 +14,13 @@
     <h3>Эксперт</h3>
     <h4>Форма</h4>
         <?php
-            $mysqli = new mysqli('localhost', 'root', '', 'opros');
+            $mysqli = new mysqli('std-mysql', 'std_946', 'cisco12345', 'std_946');
 
             if (mysqli_connect_error()){
                 prinf("Соединение не установлено", mysqli_connect_error());
                 exit();
             }
-            $query = $mysqli->query('SELECT * FROM my_opros');
+            $query = $mysqli->query('SELECT * FROM my_opros1');
 
             $row = mysqli_fetch_assoc($query);
             echo'<form action="" method="post">
@@ -85,7 +85,7 @@
         };
         $sr_sum = $sum/5;
 
-        $query = "INSERT INTO my_opros(answer1, answer2, answer3, answer4, answer5, answer6, user_name, date, sum, sr_sum, answer5_1, answer5_2) VALUES ('$answer1', '$answer2', '$answer3', '$answer4', '$answer5', '$answer6', '$user_name', '$date', '$sum', '$sr_sum', $answer5_1, $answer5_2)";
+        $query = "INSERT INTO my_opros1(answer1, answer2, answer3, answer4, answer5, answer6, user_name, date, sum, sr_sum, answer5_1, answer5_2) VALUES ('$answer1', '$answer2', '$answer3', '$answer4', '$answer5', '$answer6', '$user_name', '$date', '$sum', '$sr_sum', $answer5_1, $answer5_2)";
         $mysqli->query($query);
         $mysqli->close();
         $url = 'http://localhost/exam/thanks.php';
