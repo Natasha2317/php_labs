@@ -88,7 +88,7 @@
         $query = "INSERT INTO my_opros1(answer1, answer2, answer3, answer4, answer5, answer6, user_name, date, sum, sr_sum, answer5_1, answer5_2) VALUES ('$answer1', '$answer2', '$answer3', '$answer4', '$answer5', '$answer6', '$user_name', '$date', '$sum', '$sr_sum', $answer5_1, $answer5_2)";
         $mysqli->query($query);
         $mysqli->close();
-        $url = 'http://localhost/exam/thanks.php';
+         $url = 'http://php-labs.std-946.ist.mospolytech.ru/exam/thanks.php';
 
         header("Location: $url");
     }
