@@ -34,7 +34,7 @@
         $password = htmlspecialchars($_POST['password'], ENT_QUOTES, 'UTF-8');
 
         if ($password == '12345'){
-        $url = 'http://exam/create.php';
+        $url = 'http://php-labs.std-946.ist.mospolytech.ru/exam/create.php';
 
         header("Location: $url");
         }
