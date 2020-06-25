@@ -64,7 +64,7 @@
         VALUES(NULL, '$name_opros','$question1', '$question2', '$question3', '$question4','$question5',
         '$question6', '$question5_1', $question5_2) ";
         $mysqli->query($query);
-        $url = 'http://localhost/exam/create.php';
+        $url = 'http://php-labs.std-946.ist.mospolytech.ru/exam/create.php';
 
         header("Location: $url");
 
